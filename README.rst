@@ -56,11 +56,6 @@ And here is what that would look like after running it through DryYAML:
      subnode2: val1
 
 
-
-
-parsing the DryYAML file  Jinja works by passing a context (a dictionary) to the template and substituting in 
-
-
 Features
 --------
 
