@@ -18,7 +18,7 @@ DryYAML
      :alt: Updates
 
 
-A sane way to completely stop repeating yourself in YAML configs.
+A way to completely stop repeating yourself in YAML configs.
 
 * Free software: MIT license
 * Documentation: https://dryyaml.readthedocs.io.
@@ -36,7 +36,7 @@ How it works
 ------------
 A DryYAML config file is like a regular YAML config file, plus Jinja2_ variables and expressions. DryYAML transforms a DryYAML config file into plain vanilla YAML by passing the parsed YAML *above* each line of code to Jinja as the context under which each line in the DryYAML template is rendered. 
 
-An example might help sort that out. Here is some example DryYAML.
+An example might help sort that out. Here is some example DryYAML with a simple jinja variable:
 
 .. code-block:: yaml
 
@@ -44,6 +44,8 @@ An example might help sort that out. Here is some example DryYAML.
    node2:
      subnode1: subval1
      subnode2: {{ node1 }}
+
+And here is what that would look like after running it through DryYAML:
 
 .. code-block:: bash
 
